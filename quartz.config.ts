@@ -16,8 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    /* baseUrl: "quartz.jzhao.xyz", */
-	 baseUrl: "beabung.github.io/quartz-test",
+    baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
