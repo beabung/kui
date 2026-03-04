@@ -8,8 +8,4 @@
 
 [[ECS와 EKS]]
 
-[[EC2기반에서 ECS기반으로]]
-
 [[EKS Cluster]]
-
-[[EC2기반에서 EKS기반으로]]
