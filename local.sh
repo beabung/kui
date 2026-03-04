@@ -1,0 +1,1 @@
+rm -rf .quartz-cache public && npx quartz build --serve

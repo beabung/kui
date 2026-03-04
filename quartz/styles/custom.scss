@@ -1,0 +1,98 @@
+// Quartz의 기본 변수들을 사용하기 위해 레이아웃 설정 로드 (경로 주의)
+@use "./base.scss";
+@use "themes";
+
+// 1. 폰트 파일 등록
+@font-face {
+  font-family: "Maplestory";
+  src: url("/static/fonts/Maplestory-Light.ttf") format("truetype");
+  font-weight: 300; // Light 버전
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maplestory";
+  src: url("/static/fonts/Maplestory-Bold.ttf") format("truetype");
+  font-weight: 700; // Bold 버전
+  font-style: normal;
+}
+
+// 2. Quartz 변수에 적용
+:root {
+  --bodyFont: "Maplestory", sans-serif;
+  --headerFont: "Maplestory", sans-serif;
+}
+
+/* 모든 요소에 폰트 강제 적용 */
+* {
+  font-family: "Maplestory", "Noto Sans KR", sans-serif !important;
+}
+
+/* 코드 블록 등 특수 요소도 포함 */
+code, pre, kbd, samp {
+  font-family: "Maplestory", "JetBrains Mono", monospace !important; // 코드는 가독성 좋은 모노체 추천
+}
+
+// 3. 디테일 조정 (가독성 향상)
+body, section {
+  font-family: var(--bodyFont);
+  font-weight: 300; // 기본은 Light로 설정
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: var(--headerFont);
+  font-weight: 700; // 제목이나 굵은 글씨는 Bold로 설정
+}
+
+// 1. 모든 링크에서 기본 밑줄 제거
+a {
+  text-decoration: none !important; // 밑줄 제거
+  transition: color 0.2s ease;     // 색상 변경 시 부드럽게 전환
+}
+
+// 2. 본문(center) 내의 링크 설정
+.center a {
+  border-bottom: none !important; // Quartz의 일부 테마에서 사용하는 하단 보더 제거
+  color: var(--secondary);        // Quartz 기본 테마 색상 유지 (혹은 원하는 색상)
+  
+  // 마우스를 올렸을 때의 피드백
+  &:hover {
+    color: var(--tertiary) !important; // 마우스 올리면 색상 변경
+    text-decoration: none !important;  // 마우스 올려도 밑줄 안 생기게 유지
+    background-color: rgba(var(--secondaryRGB), 0.1); // 살짝 배경색 강조 (선택 사항)
+    border-radius: 4px;
+    padding: 0 2px;
+  }
+}
+
+// 3. 위키링크(Internal Links) 특유의 스타일이 있다면 함께 제거
+.internal-link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+
+
+
+
+/* 상단의 네비게이션 링크 제거 */
+.breadcrumb-container .breadcrumb-element a {
+  /* 1. 클릭 기능 완전히 차단 */
+  pointer-events: none;
+  
+  /* 2. 클릭할 수 없는 것처럼 보이게 커서 변경 (선택 사항) */
+  cursor: default;
+  
+  /* 3. 링크 특유의 색상이나 밑줄 제거 (선택 사항) */
+  color: var(--dark); /* 본문 텍스트 색상과 맞춤 */
+  text-decoration: none !important;
+}
+
+
+
+.popover {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
