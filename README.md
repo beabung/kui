@@ -6,7 +6,7 @@ My Vault: Knowledge Archive & Blog
 
 작성된 노트는 아래 주소를 통해 웹으로 확인할 수 있습니다.
 
-• URL: https://beabung.github.io/kui/(https://beabung.github.io/kui/)
+• URL: https://beabung.github.io/kui/
 
 2. 운영 브랜치 가이드
 
