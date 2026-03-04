@@ -2,7 +2,7 @@ name: Deploy Quartz
 on:
   push:
     branches:
-      - v4  # 본인의 메인 브랜치가 main이면 main으로 수정
+      - master  # 본인의 메인 브랜치가 main이면 main으로 수정
 permissions:
   contents: write
   pages: write
