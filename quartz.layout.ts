@@ -51,7 +51,7 @@ export const defaultContentPageLayout: PageLayout = {
 			const slug = node.file?.slug?.toLowerCase() || "";
 
 			// 제외하고 싶은 키워드들 (소문자로 작성)
-			const excludeKeywords = ["note", "extra", "template"];
+			const excludeKeywords = ["note", "extra", "template", "volume"];
 
 			// 조건: 폴더 이름이나 슬러그에 해당 키워드가 포함되어 있으면 제외(false)
 			if (
@@ -101,7 +101,7 @@ export const defaultListPageLayout: PageLayout = {
 			const slug = node.file?.slug?.toLowerCase() || "";
 
 			// 제외하고 싶은 키워드들 (소문자로 작성)
-			const excludeKeywords = ["note", "extra", "template"];
+			const excludeKeywords = ["note", "extra", "template", "volume"];
 
 			// 조건: 폴더 이름이나 슬러그에 해당 키워드가 포함되어 있으면 제외(false)
 			if (
